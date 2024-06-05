@@ -6,6 +6,170 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_timer"
+                style="@style/OrangeButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_30s"
+                android:textColor="#616161" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_question_mainActivity"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_31_7"
+                android:textSize="34sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_score"
+                style="@style/BlueButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_0_0"
+                android:textColor="#5E35B1" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#EF6767"
+                android:onClick="onButtonClick"
+                android:tag="0"
+                android:text="@string/_14"
+                android:textSize="48sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#673AB7"
+                android:onClick="onButtonClick"
+                android:tag="1"
+                android:text="@string/_14"
+                android:textSize="48sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#4CAF50"
+                android:onClick="onButtonClick"
+                android:tag="2"
+                android:text="@string/_14"
+                android:textSize="48sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="155dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#009688"
+                android:onClick="onButtonClick"
+                android:tag="3"
+                android:text="@string/_14"
+                android:textSize="48sp"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="133dp" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tv_correct_mainActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/correct"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+
+        <Button
+            android:id="@+id/btn_playAgain"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_again"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#654C89"
+            android:textStyle="bold"
+            app:iconTint="#7D738B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_correct_mainActivity"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/btn_go_mainActivity"
         style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
@@ -17,137 +181,11 @@
         android:textColor="#00796B"
         android:textSize="48sp"
         android:textStyle="bold"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/black" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
-        style="@style/OrangeButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/_30s"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
-        style="@style/BlueButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/_0_0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_question_mainActivity"
-        style="@style/TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/_31_7"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <GridLayout
-        android:id="@+id/gridLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question_mainActivity">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button00"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:backgroundTint="#EF6767"
-            android:onClick="onButtonClick"
-            android:tag="00"
-            android:text="@string/_14"
-            android:textSize="48sp" />
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:backgroundTint="#673AB7"
-            android:onClick="onButtonClick"
-            android:tag="01"
-            android:text="@string/_14"
-            android:textSize="48sp" />
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:backgroundTint="#4CAF50"
-            android:onClick="onButtonClick"
-            android:tag="10"
-            android:text="@string/_14"
-            android:textSize="48sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="155dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:backgroundTint="#009688"
-            android:onClick="onButtonClick"
-            android:tag="11"
-            android:text="@string/_14"
-            android:textSize="48sp"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="133dp" />
-
-    </GridLayout>
-
-    <TextView
-        android:id="@+id/tv_correct_mainActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/correct"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

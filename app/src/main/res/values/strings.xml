@@ -6,4 +6,7 @@
     <string name="_14">14</string>
     <string name="correct">Correct</string>
     <string name="_30s">30s</string>
+    <string name="wrong">Wrong!</string>
+    <string name="done">Done</string>
+    <string name="play_again">Play Again</string>
 </resources>
